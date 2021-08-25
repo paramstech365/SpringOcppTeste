@@ -24,6 +24,12 @@ public class NameOfStationsConnected {
 		
 		return new Client(Global.id,Global.session,Global.client);
 	}
+	@GetMapping("/etc")
+	public Client etc( ) {
+		Client ok=new Client("1","1","1");
+		
+		return ok;
+	}
 	@GetMapping("/")
 	public String init( ) {
 		
