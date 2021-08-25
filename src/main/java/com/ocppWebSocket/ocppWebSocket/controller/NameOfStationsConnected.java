@@ -24,7 +24,12 @@ public class NameOfStationsConnected {
 		
 		return new Client(Global.id,Global.session,Global.client);
 	}
-
+	@GetMapping("/")
+	public String init( ) {
+		
+		
+		return "Init app!";
+	}
 
 
 
