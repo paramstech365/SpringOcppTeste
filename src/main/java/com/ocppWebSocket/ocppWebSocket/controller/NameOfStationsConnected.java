@@ -19,8 +19,7 @@ public class NameOfStationsConnected {
 	@GetMapping("/connect")
 	public Client greeting( ) {
 		Client ok=new Client("1","1","1");
-		JSONObject ss=new JSONObject(Client.class);
-		System.out.print(ss);
+		
 		
 		return new Client(Global.id,Global.session,Global.client);
 	}
