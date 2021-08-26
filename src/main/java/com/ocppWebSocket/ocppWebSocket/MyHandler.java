@@ -19,17 +19,22 @@ import com.ocppWebSocket.ocppWebSocket.domains.Auth;
 import com.ocppWebSocket.ocppWebSocket.domains.AuthorizeResponse;
 import com.ocppWebSocket.ocppWebSocket.domains.BootNotificationResponse;
 import com.ocppWebSocket.ocppWebSocket.domains.HeartbeatResponse;
+import com.ocppWebSocket.ocppWebSocket.domains.IdTagInfo;
+import com.ocppWebSocket.ocppWebSocket.domains.StartTransactionResponse;
 
 public class MyHandler extends TextWebSocketHandler implements SubProtocolCapable {
 	
-	private final String[] subProtocols = {"Ocpp1.6", "Ocpp2.0"};
+	
+
+	private final String[] subProtocols = {"ocpp1.6", "ocpp2.0"};
 	
 	@Override
 	public void afterConnectionClosed(WebSocketSession session, CloseStatus status) {
 		Global.id="";
 		Global.session="";
 		Global.client="Close";
-		System.out.print("\n Connection Close \n");
+		System.out.print("\n Connection Close \n"+"Session: "+session.getId()+"\n");
+		session.getHandshakeHeaders();
 		
 	}
 	@Override
@@ -40,7 +45,7 @@ public class MyHandler extends TextWebSocketHandler implements SubProtocolCapabl
 		Global.client="ok";
 		
 		Client aa= new Client(session.getId(),session.getUri().toString(),"ok");
-		System.out.print("Conectado \n");
+		System.out.print("\n Connected \n"+"Session: "+session.getId()+"\n");
 		
 		System.out.print(session.getUri());
 		
@@ -55,9 +60,12 @@ public class MyHandler extends TextWebSocketHandler implements SubProtocolCapabl
     	ZonedDateTime data = ZonedDateTime.now();
     	BootNotificationResponse stat=new BootNotificationResponse("Accepted",data.toString(),300);
     	JSONArray mm=new JSONArray((message.getPayload()).toString());
-    	
+    	session.sendMessage(new TextMessage(message.getPayload().toString()));
+    	System.out.print("\n Remote: "+session.getRemoteAddress()+"\n");
     	JSONObject ss=new JSONObject(stat);
+    	System.out.print(session.getHandshakeHeaders());
     	JSONArray ja = new JSONArray();
+    	
     	ja.put(3);
     	ja.put(mm.get(1));
     	//
@@ -102,6 +110,11 @@ public class MyHandler extends TextWebSocketHandler implements SubProtocolCapabl
     		
     		
     	}
+    	if(mm.get(2).equals("StartTransaction")) {
+    		System.out.print("Start charge \n");
+    		StartTransactionResponse n =new StartTransactionResponse(new IdTagInfo("dff","Accepted","Accepted"),1);
+    		session.sendMessage(new TextMessage(n.toString()));
+    	}
     	
     	
         // ...
@@ -113,6 +126,7 @@ public class MyHandler extends TextWebSocketHandler implements SubProtocolCapabl
     	System.out.print(Arrays.asList(subProtocols));
         return Arrays.asList(subProtocols);
     }
+    
     
 
 }

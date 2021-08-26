@@ -4,6 +4,7 @@ public class Auth {
 	
 
 	private AuthorizeResponse idTagInfo;
+	
 	public Auth() {
 		
 	}

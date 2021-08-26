@@ -2,24 +2,26 @@ package com.ocppWebSocket.ocppWebSocket.domains;
 
 public class StartTransactionResponse {
 	
-	private Object idTagInfo;
+	
+
+	private IdTagInfo idTagInfo;
 	private Integer transactionId;
 	
 	public StartTransactionResponse() {
 		
 	}
 	
-	public StartTransactionResponse(Object idTagInfo, Integer transactionId) {
+	public StartTransactionResponse(IdTagInfo idTagInfo, Integer transactionId) {
 		super();
 		this.idTagInfo = idTagInfo;
 		this.transactionId = transactionId;
 	}
 
-	public Object getIdTagInfo() {
+	public IdTagInfo getIdTagInfo() {
 		return idTagInfo;
 	}
 
-	public void setIdTagInfo(Object idTagInfo) {
+	public void setIdTagInfo(IdTagInfo idTagInfo) {
 		this.idTagInfo = idTagInfo;
 	}
 
@@ -30,6 +32,5 @@ public class StartTransactionResponse {
 	public void setTransactionId(Integer transactionId) {
 		this.transactionId = transactionId;
 	}
-	
 
 }
