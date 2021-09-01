@@ -134,22 +134,27 @@ Quando uma operação termina ou é parada, a estação envia uma notificação 
 
 ### Exemplo de requisição BootNotification feita pela estação de recarga:
 
-...
+```
+
 [2,
  "19223201",
  "BootNotification",
  {"chargePointVendor": "VendorX", "chargePointModel": "SingleSocketCharger"}
 ]
-...
+
+```
+
 
 ### Exemplo de resposta BootNotification feita pelo servidor:
 
-...
+```
+
 [3,
  "19223201",
  {"status":"Accepted", "currentTime":"2013-02-01T20:53:32.486Z", "heartbeatInterval":300}
 ]
-...
+
+```
 
 
 
