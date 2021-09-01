@@ -19,7 +19,7 @@ StartTransaction;
 ## Operações iniciadas pela estação de carga:
 
 ### Authorize
-![Screenshot](authorize.PNG)
+![Screenshot](./img/authorize.PNG)
 ![alt text](https://github.com/LucasJordi/SpringOcppTeste/img/authorize.PNG?raw=true)
 <img src="https://github.com/LucasJordi/SpringOcppTeste/img/authorize.PNG?raw=true"/>
 ![plot](./img/boot.png)
