@@ -20,33 +20,31 @@ StartTransaction;
 
 ### Authorize
 ![Screenshot](./img/authorize.PNG)
-![alt text](https://github.com/LucasJordi/SpringOcppTeste/img/authorize.PNG?raw=true)
-<img src="https://github.com/LucasJordi/SpringOcppTeste/img/authorize.PNG?raw=true"/>
-![plot](./img/boot.png)
+
 
 ### Boot Notification
-<img src="./img/boot.png"/>
+![Screenshot](./img/boot.png)
 
 ### Data Transfer
-<img src="./img/data.png"/>
+![Screenshot](./img/data.png)
 
 ### Diagnostics Status Notification
-<img src="./img/diagnost.png"/>
+![Screenshot](./img/diagnost.png)
 
 ### Firmaware Status
-<img src="./img/firm.png"/>
+![Screenshot](./img/firm.png)
 
 ### Heartbeat
-<img src="./img/heart.png"/>
+![Screenshot](./img/heart.png)
 
 ### Start Transaction
-<img src="./img/start.png"/>
+![Screenshot](./img/start.png)
 
 ### Status Notification
-<img src="./img/status.png"/>
+![Screenshot](./img/status.png)
 
 ### Stop Transaction
-<img src="./img/stop.png"/>
+![Screenshot](./img/stop.png)
 
 ### Exemplo de requisição BootNotification feita pela estação de recarga:
 
