@@ -20,31 +20,32 @@ StartTransaction;
 
 ### Authorize
 ![Screenshot](./img/authorize.PNG)
+<img src="./img/authorize.PNG"/>
 
 
 ### Boot Notification
-![Screenshot](./img/boot.png)
+![Screenshot](./img/boot.PNG)
 
 ### Data Transfer
-![Screenshot](./img/data.png)
+![Screenshot](./img/data.PNG)
 
 ### Diagnostics Status Notification
-![Screenshot](./img/diagnost.png)
+![Screenshot](./img/diagnost.PNG)
 
 ### Firmaware Status
-![Screenshot](./img/firm.png)
+![Screenshot](./img/firm.PNG)
 
 ### Heartbeat
-![Screenshot](./img/heart.png)
+![Screenshot](./img/heart.PNG)
 
 ### Start Transaction
-![Screenshot](./img/start.png)
+![Screenshot](./img/start.PNG)
 
 ### Status Notification
-![Screenshot](./img/status.png)
+![Screenshot](./img/status.PNG)
 
 ### Stop Transaction
-![Screenshot](./img/stop.png)
+![Screenshot](./img/stop.PNG)
 
 ### Exemplo de requisição BootNotification feita pela estação de recarga:
 
