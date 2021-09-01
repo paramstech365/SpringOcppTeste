@@ -67,6 +67,71 @@ A estação de recarga envia uma notificação para a central para informar sobr
 
 Quando uma operação termina ou é parada, a estação envia uma notificação do tipo StopTransaction informando que a transação foi finalizada.
 
+
+## Operações iniciadas pela Central:
+
+### Cancel Reservation
+![Screenshot](./img/cancel.PNG)
+
+### Change Availability
+![Screenshot](./img/change.PNG)
+
+### Change Configuration
+![Screenshot](./img/changeconf.PNG)
+
+### Clear Cache
+![Screenshot](./img/clear.PNG)
+
+### Clear Chargin Profile
+![Screenshot](./img/clearcharg.PNG)
+
+### Data Transfer
+![Screenshot](./img/datatransf.PNG)
+
+### Get Composite Schedule
+![Screenshot](./img/getcomp.PNG)
+
+### Get Configuration
+![Screenshot](./img/getconf.PNG)
+
+### Get Diagnostics
+![Screenshot](./img/getdiag.PNG)
+
+### Get Local List Version
+![Screenshot](./img/getlocallist.PNG)
+
+### Remote Start Transaction
+![Screenshot](./img/remote.PNG)
+
+### Remote Stop Transaction
+![Screenshot](./img/remotestop.PNG)
+
+### Reserve Now
+![Screenshot](./img/reserve.PNG)
+
+### Reset
+![Screenshot](./img/reset.PNG)
+
+### Send Local List
+![Screenshot](./img/send.PNG)
+
+### Set Charging Profile
+![Screenshot](./img/setcharg.PNG)
+
+### Trigger Message
+![Screenshot](./img/trigger.PNG)
+
+### Unlock Connector
+![Screenshot](./img/unlock.PNG)
+
+### Update Firmware
+![Screenshot](./img/update.PNG)
+
+
+
+
+
+
 ### Exemplo de requisição BootNotification feita pela estação de recarga:
 
 <pre> 
