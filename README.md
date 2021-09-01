@@ -21,16 +21,28 @@ StartTransaction;
 ### Authorize
 ![Screenshot](./img/authorize.PNG)
 
+Antes que o dono do veículo possa iniciar a recarga, a estação precisa autorizar a operação.
+
 
 
 ### Boot Notification
 ![Screenshot](./img/boot.PNG)
 
+Após a estação inicializar é feita uma requisição a central com os seus dados de configuração. A estação aguarda a resposta em status "Accepted" para prosseguir com a operação.
+Toda vez que o sistema inicializa ou reinicializa essa operação é feita.
+
+
 ### Data Transfer
 ![Screenshot](./img/data.PNG)
 
+Quando a estação precisa mandar informações para central com funções não suportadas pelo OCPP utiliza-se o DataTransfer.
+
+
+
 ### Diagnostics Status Notification
 ![Screenshot](./img/diagnost.PNG)
+
+A estação envia notificações sobre o status de diagnostico de envio.
 
 ### Firmaware Status
 ![Screenshot](./img/firm.PNG)
@@ -38,14 +50,22 @@ StartTransaction;
 ### Heartbeat
 ![Screenshot](./img/heart.PNG)
 
+Para que a central saiba que a estação de recarga continua conectada, o ponto de recarga envia uma notificação Heartbeat a um dado intervalo de tempo.
+
 ### Start Transaction
 ![Screenshot](./img/start.PNG)
+
+O ponto de recarga envia uma notificação StartTransaction para a central para informar que a operação de carga foi iniciada.
 
 ### Status Notification
 ![Screenshot](./img/status.PNG)
 
+A estação de recarga envia uma notificação para a central para informar sobre mudanças de status ou possiveis erros que acontecem com a estação.
+
 ### Stop Transaction
 ![Screenshot](./img/stop.PNG)
+
+Quando uma operação termina ou é parada, a estação envia uma notificação do tipo StopTransaction informando que a transação foi finalizada.
 
 ### Exemplo de requisição BootNotification feita pela estação de recarga:
 
