@@ -20,7 +20,7 @@ StartTransaction;
 
 ### Authorize
 ![Screenshot](./img/authorize.PNG)
-<img src="./img/authorize.PNG"/>
+
 
 
 ### Boot Notification
