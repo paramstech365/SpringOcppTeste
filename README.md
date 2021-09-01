@@ -1,5 +1,5 @@
 # SpringOcppTeste
-# Implementando um teste para comunicação com estação de recarga usando o OCPP
+# Implementando um teste para comunicação com estação de recarga usando o o protocolo OCPP
 
 O intuito desse projeto é aprender a operar e entender o como funciona o OCPP. Por enquanto o único público alvo desse trabalho é o próprio autor.
 
