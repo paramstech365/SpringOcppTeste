@@ -21,6 +21,7 @@ StartTransaction;
 ### Authorize
 ![alt text](https://github.com/LucasJordi/SpringOcppTeste/img/authorize.png?raw=true)
 <img src="https://github.com/LucasJordi/SpringOcppTeste/img/authorize.png?raw=true"/>
+![plot](./img/boot.png)
 
 ### Boot Notification
 <img src="./img/boot.png"/>
