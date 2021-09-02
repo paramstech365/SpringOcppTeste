@@ -32,7 +32,7 @@ StartTransaction;
 <a name="projeto"></a>
 ## Operações realizadas no projeto (central):
 
-A central se comunica com a estação através de WebSocket. A central faz o papel de servidor enquanto que o cliente é a estação de carga.
+A central se comunica com a estação através de WebSocket. A central faz o papel de servidor enquanto que o cliente é a estação de recarga.
 Todas as operações controladas pelo WebSocket são gerenciadas pelo [Handler](https://github.com/LucasJordi/SpringOcppTeste/blob/master/src/main/java/com/ocppWebSocket/ocppWebSocket/MyHandler.java).
 
 Assim que a estação de recarga se comunica com a rota /central e a conexão é feita com sucesso, é acionado o parâmetro *afterConnectionEstablished* que informa que a conexão foi feita com sucesso através do controlardor [NameOfStationsConnected](https://github.com/LucasJordi/SpringOcppTeste/blob/master/src/main/java/com/ocppWebSocket/ocppWebSocket/controller/NameOfStationsConnected.java).
@@ -84,7 +84,7 @@ Se a operação de BootNotification for aceita pela estação, a mesma envia um 
 O "id" referencia o id da sessão, o "session" é a rota no qual a estação/cliente entrou em contato com o WebSocket.
 
 <a name="carga"></a>
-## Operações iniciadas pela estação de carga:
+## Operações iniciadas pela estação de recarga:
 
 ### Authorize
 ![Screenshot](./img/authorize.PNG)
@@ -124,7 +124,7 @@ Para que a central saiba que a estação de recarga continua conectada, o ponto 
 ### Start Transaction
 ![Screenshot](./img/start.PNG)
 
-O ponto de recarga envia uma notificação StartTransaction para a central para informar que a operação de carga foi iniciada.
+O ponto de recarga envia uma notificação StartTransaction para a central para informar que a operação de recarga foi iniciada.
 
 ### Status Notification
 ![Screenshot](./img/status.PNG)
