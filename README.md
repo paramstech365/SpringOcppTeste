@@ -12,6 +12,7 @@ O intuito desse projeto é aprender a operar e entender o como funciona o OCPP. 
 4. [ Operações iniciadas pela estação de recarga ](#carga)
 5. [ Operações iniciadas pela Central ](#central)
 
+<a name="breve"></a>
 ## Breve resumo sobre o OCPP
 O OCPP é um protocolo desenvolvido pela Open Charge Alliance. O OCPP é um protocolo de aplicação
 de comunicação entre estações de recarga, veículos elétricos e a central de de gerenciamento. Um dos pontos importantes 
@@ -21,13 +22,14 @@ sendo possível ser utilizada em qualquer estação de recarga.
 
 
 
-
+<a name="imple"></a>
 ## Implementações feitas nesse projeto:
 BootNotification;
 Heartbeat;
 StatusNotification;
 StartTransaction;
 
+<a name="projeto"></a>
 ## Operações realizadas no projeto (central):
 
 A central se comunica com a estação através de WebSocket. A central faz o papel de servidor enquanto que o cliente é a estação de carga.
@@ -81,6 +83,7 @@ Se a operação de BootNotification for aceita pela estação, a mesma envia um 
 ```
 O "id" referencia o id da sessão, o "session" é a rota no qual a estação/cliente entrou em contato com o WebSocket.
 
+<a name="carga"></a>
 ## Operações iniciadas pela estação de carga:
 
 ### Authorize
@@ -97,7 +100,7 @@ Após a estação inicializar é feita uma requisição a central com os seus da
 Toda vez que o sistema inicializa ou reinicializa essa operação é feita.
 
 
-<a name="desc"></a>
+
 ### Data Transfer
 ![Screenshot](./img/data.PNG)
 
@@ -133,7 +136,7 @@ A estação de recarga envia uma notificação para a central para informar sobr
 
 Quando uma operação termina ou é parada, a estação envia uma notificação do tipo StopTransaction informando que a transação foi finalizada.
 
-
+<a name="central"></a>
 ## Operações iniciadas pela Central:
 
 ### Cancel Reservation
