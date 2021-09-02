@@ -1,4 +1,4 @@
-# SpringOcppTeste
+# SpringOcpp
 # Implementando um teste para comunicação com estação de recarga usando o o protocolo OCPP
 
 O intuito desse projeto é aprender a operar e entender o como funciona o OCPP. Por enquanto o único público alvo desse trabalho é o próprio autor.
@@ -23,7 +23,51 @@ Todas as operações controladas pelo WebSocket são gerenciadas pelo [Handler](
 
 Assim que a estação de recarga se comunica com a rota /central e a conexão é feita com sucesso, é acionado o parâmetro *afterConnectionEstablished* que informa que a conexão foi feita com sucesso através do controlardor [NameOfStationsConnected](https://github.com/LucasJordi/SpringOcppTeste/blob/master/src/main/java/com/ocppWebSocket/ocppWebSocket/controller/NameOfStationsConnected.java).
 
+A estação envia uma requisição BootNotification e espera receber uma resposta BootNotification.
 
+##### Exemplo de requisição BootNotification feita pela estação de recarga:
+
+```
+
+[2,
+ "19223201",
+ "BootNotification",
+ {"chargePointVendor": "VendorX", "chargePointModel": "SingleSocketCharger"}
+]
+
+```
+
+
+##### Exemplo de resposta BootNotification feita pelo servidor:
+
+```
+
+[3,
+ "19223201",
+ {"status":"Accepted", "currentTime":"2013-02-01T20:53:32.486Z", "heartbeatInterval":300}
+]
+
+```
+
+Se a operação de BootNotification for aceita pela estação, a mesma envia um status com as informações pertinentes (número de conectores, status dos conectores e etc).
+
+##### Exemplo de envio StatusNotification feita pela estação:
+
+```
+[2,
+ "2",
+ "StatusNotification",
+ {"timestamp":"2021-09-02T12:03:32.874Z","connectorStatus":"Available","evseId":1,"connectorId":1}
+]
+
+``` 
+
+É possível chegar os dados da sessão do WebSocket na rota /connect:
+
+```
+ {"id":"9b53fae7-2d41-3d6d-4427-62341b103f02","session":"ws://localhost:8080/central/EVB-P17390866","client":"ok"}
+```
+O "id" referencia o id da sessão, o "session" é a rota no qual a estação/cliente entrou em contato com o WebSocket.
 
 ## Operações iniciadas pela estação de carga:
 
@@ -141,29 +185,6 @@ Quando uma operação termina ou é parada, a estação envia uma notificação 
 
 
 
-### Exemplo de requisição BootNotification feita pela estação de recarga:
-
-```
-
-[2,
- "19223201",
- "BootNotification",
- {"chargePointVendor": "VendorX", "chargePointModel": "SingleSocketCharger"}
-]
-
-```
-
-
-### Exemplo de resposta BootNotification feita pelo servidor:
-
-```
-
-[3,
- "19223201",
- {"status":"Accepted", "currentTime":"2013-02-01T20:53:32.486Z", "heartbeatInterval":300}
-]
-
-```
 
 
 
