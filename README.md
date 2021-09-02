@@ -3,7 +3,7 @@
 
 O intuito desse projeto é aprender a operar e entender o como funciona o OCPP. Por enquanto o único público alvo desse trabalho é o próprio autor.
 
-**Sumário**
+## Sumário
 
 
 1. [Breve resumo sobre o OCPP](#breve)
