@@ -16,11 +16,14 @@ Heartbeat;
 StatusNotification;
 StartTransaction;
 
-**Table of Contents**
+## Operações realizadas no projeto (central):
 
-[TOCM]
+A central se comunica com a estação através de WebSocket. A central faz o papel de servidor enquanto que o cliente é a estação de carga.
+Todas as operações controladas pelo WebSocket são gerenciadas pelo [Handler](https://github.com/LucasJordi/SpringOcppTeste/blob/master/src/main/java/com/ocppWebSocket/ocppWebSocket/MyHandler.java).
 
-[TOC]
+Assim que a estação de recarga se comunica com a rota /central e a conexão é feita com sucesso, é acionado o parâmetro *afterConnectionEstablished* que informa que a conexão foi feita com sucesso através do controlardor [NameOfStationsConnected](https://github.com/LucasJordi/SpringOcppTeste/blob/master/src/main/java/com/ocppWebSocket/ocppWebSocket/controller/NameOfStationsConnected.java).
+
+
 
 ## Operações iniciadas pela estação de carga:
 
