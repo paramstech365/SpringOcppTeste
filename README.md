@@ -4,17 +4,23 @@
 O intuito desse projeto é aprender a operar e entender o como funciona o OCPP. Por enquanto o único público alvo desse trabalho é o próprio autor.
 
 
-##Breve resumo sobre o OCPP
+## Breve resumo sobre o OCPP
 O OCPP é um protocolo desenvolvido pela Open Charge Alliance. O OCPP é um protocolo de aplicação
 de comunicação entre estações de recarga, veículos elétricos e a central de de gerenciamento. Um dos pontos importantes 
 do projeto é tornar essa interação fácil e livre
 sendo possível ser utilizada em qualquer estação de recarga.
 
-##Implementações feitas nesse projeto:
+## Implementações feitas nesse projeto:
 BootNotification;
 Heartbeat;
 StatusNotification;
 StartTransaction;
+
+**Table of Contents**
+
+[TOCM]
+
+[TOC]
 
 ## Operações iniciadas pela estação de carga:
 
