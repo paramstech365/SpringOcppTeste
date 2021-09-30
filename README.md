@@ -76,7 +76,7 @@ Se a operação de BootNotification for aceita pela estação, a mesma envia um 
 
 ``` 
 
-É possível chegar os dados da sessão do WebSocket na rota /connect:
+É possível checar os dados da sessão do WebSocket na rota /connect:
 
 ```
  {"id":"9b53fae7-2d41-3d6d-4427-62341b103f02","session":"ws://localhost:8080/central/EVB-P17390866","client":"ok"}
